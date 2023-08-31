@@ -1,0 +1,7 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        String num = Integer.toString(x);
+        String ne = new StringBuilder(num).reverse().toString();
+        return ne.equals(num);
+    }
+}
