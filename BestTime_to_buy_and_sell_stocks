@@ -1,0 +1,15 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        int minPr = Integer.MAX_VALUE;
+        int maxPr = 0;
+        for(int price: prices) {
+            if(price<minPr) {
+                minPr = price;
+            }
+            else if(price - minPr >maxPr) {
+                maxPr = price-minPr;
+            }
+        }
+        return maxPr;
+    }
+}
